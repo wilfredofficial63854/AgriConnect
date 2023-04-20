@@ -28,7 +28,20 @@
 			
 			if(move_uploaded_file($file_tmp, $file_path)){
 				mysqli_query($conn, "INSERT INTO `users`(`full_name`, `email_address`, `pass_word`, `city`, `region`, `phone_number`, `dob`, `sex`, `photo`, `country`) VALUES ('$full_name','$email','$password','$city','$region','$phone_number','$dob','$sex','$photo','$country')");
+			
+				
+				//sms system to send sms to the registered user
+				$msg = "You have successfully registered with Agriconnect %0a Login  with %0a Username :".$email ."%0a password : ".$_POST['password'];
+				$ch = curl_init();
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($ch, CURLOPT_URL,'https://apps.mnotify.net/smsapi?key=La8VLWaSy1ISXDUyBl6D1ycio&to='.$phone_number. '&msg='.$msg .'&sender_id=WestBridge');
+				$content = curl_exec($ch);
+				
+				
+				
 				echo "<script> alert('Account created successfully! Login to continue'); </script>";
+				//header('location:../index.php');
+
 			}else{
 				echo "<script> alert('Failed to create account! Please try again.'); </script>";
 			}

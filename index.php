@@ -52,7 +52,7 @@
 					<span style="color: gray;" class="dash-line"> | </span>
 					<?php 
 						if(isset($_SESSION['user_id'])){
-							echo "<span> ".$user_data['full_name']." </span>";
+							echo "<span>" .$user_data['full_name']."<a href='logout.php'><font size='2'> (Logout) </font></a> </span>";
 						}else{
 							echo "<span>
 								<a href='login.php' target='_blank'><i class='user icon'></i>
@@ -66,7 +66,7 @@
 			
 			
 			<!-- End of Navbar -->
-			
+		
 			<main>
 				<aside class="sidebar">
 					<div class="brand"> <span style="color: var(--primary);">Agri</span><span style="color: red;">Connect</span> </div>

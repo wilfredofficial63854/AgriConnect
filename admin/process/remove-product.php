@@ -8,7 +8,7 @@
 			$item_query = mysqli_query($conn, $item_sql);
 			$item_data = mysqli_fetch_assoc($item_query);
 			$file = "../../uploads/products/".$item_data['product_image'];
-			unlink($file)
+			unlink($file);
 			echo "Product removed successfully!";
 		}else{
 			echo "Sorry! An error occured.";

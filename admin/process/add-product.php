@@ -4,7 +4,7 @@
 
 		
 		$product_name = $_POST['product_name'];
-		$product_price = $_POST['product_price'];
+		$product_price = round($_POST['product_price']);
 		$product_description = $_POST['product_description'];
 		$product_category = $_POST['product_category'];
 		$product_image = uniqid()."_".$_FILES['product_image']['name'];

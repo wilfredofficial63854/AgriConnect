@@ -18,7 +18,9 @@
 		if(isset($_POST['quantity'])){
 			$quantity = $_POST['quantity'];
 			$amount = $quantity * $price;
-			$insert_sql = "INSERT INTO `cart`(`product_id`,`product_name`, `amount`, `user_id`, `quantity`) VALUES ('$item_id', '$product_name','$amount','$user_id', '$quantity')";
+			$product_cost = round($amount, 2);
+			$insert_sql = "INSERT INTO `cart`(`product_id`,`product_name`, `amount`, `user_id`, `quantity`) VALUES ('$item_id', '$product_name','$product_cost','$user_id', '$quantity')";
+	
 		}else{
 			
 			$insert_sql = "INSERT INTO `cart`(`product_id`,`product_name`, `amount`, `user_id`) VALUES ('$item_id', '$product_name','$price','$user_id')";

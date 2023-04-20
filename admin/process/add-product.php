@@ -10,11 +10,11 @@
 		$product_image = uniqid()."_".$_FILES['product_image']['name'];
 		
 		if(empty($product_name)){
-			echo "<script> alert('Please enter the product name'); </script>";
+			echo "Please enter the product name.";
 		}else if(empty($product_price)){
-			echo "<script> alert('Please enter the product price'); </script>";
+			echo "Please enter the product price.";
 		}else if(empty($product_description)){
-			echo "<script> alert('Please enter the product description'); </script>";
+			echo "Please enter the product description.";
 		}else{
 			//upload product details
 			$file_tmp = $_FILES['product_image']['tmp_name'];
@@ -22,9 +22,9 @@
 			
 			if(move_uploaded_file($file_tmp, $file_path)){
 				mysqli_query($conn, "INSERT INTO `products`(`product_name`, `product_description`, `product_category`, `unit_price`, `product_image`) VALUES ('$product_name','$product_description','$product_category','$product_price','$product_image')");
-				echo "<script> alert('Product uploaded successfully!'); </script>";
+				echo "Product uploaded successfully!";
 			}else{
-				echo "<script> alert('Failed to upload product!'); </script>";
+				echo "Failed to upload product!";
 			}
 			
 		}

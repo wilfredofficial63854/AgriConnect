@@ -194,7 +194,8 @@
 					  cache: false,
 					  processData: false,
 					  success: function(data) {
-						$('#uploadResponse').html(data);
+						alert(data);
+						 location.reload();
 					  },
 					  error: function(data) {
 						alert("An error occurred while submitting the form.");
@@ -214,6 +215,7 @@
 						  },
 						success: function(response) {
 							alert(response);
+							 location.reload();
 						}
 					});
 				 });

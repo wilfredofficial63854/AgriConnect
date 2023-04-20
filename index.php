@@ -73,7 +73,7 @@
 					<div class="menu">
 						<header> <i class="list icon"></i> All Categories </header>
 						<ul>
-							<li><a href="under-construction.html"> Fruits </a></li>
+							<li><a href="under-construction.html"> Farm Inputs </a></li>
 							<li><a href="under-construction.html"> Vegetables </a></li>
 							<li><a href="under-construction.html"> Grains </a></li>
 						</ul>
@@ -167,7 +167,7 @@
 										<div class="menu">
 											<div class="divider"></div>
 											<div class="item" data-value="0">Everything</div>
-											<div class="item" data-value="fruits">Fruits</div>
+											<div class="item" data-value="Farm Inputs">Farm Inputs</div>
 											<div class="item" data-value="vegetables">Vegetables</div>
 											<div class="item" data-value="grains">Grains</div>
 											<!-- Add more categories as needed -->

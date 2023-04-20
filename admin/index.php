@@ -75,7 +75,7 @@
 				<div> 
 					<header> Total Number of Products </header>
 					<ul>
-						<li> Fruits: <?php echo mysqli_num_rows(mysqli_query($conn, "SELECT * FROM `products` WHERE `product_category` = 'Fruits'"));?></li>
+						<li> Farm Inputs: <?php echo mysqli_num_rows(mysqli_query($conn, "SELECT * FROM `products` WHERE `product_category` = 'Farm Inputs'"));?></li>
 						<li> Vegetables: <?php echo mysqli_num_rows(mysqli_query($conn, "SELECT * FROM `products` WHERE `product_category` = 'Vegetables'"));?></li>
 						<li> Grains: <?php echo mysqli_num_rows(mysqli_query($conn, "SELECT * FROM `products` WHERE `product_category` = 'Grains'"));?></li>
 					</ul>
@@ -113,7 +113,7 @@
 					<div>
 						<label> Product Category </label>
 						<div><select name="product_category">
-							<option>Fruits</option>
+							<option>Farm Inputs</option>
 							<option>Vegetables</option>
 							<option>Grains</option>
 						</select></div>

@@ -38,7 +38,7 @@
 						<div class="form-field"> <input type="submit" value="Sign In"/></div>
 						
 						<div class="form-field extras">
-							<p> Don't have an account? <a href="register.html">Sign Up here</a></p>
+							<p> Don't have an account? <a href="register.php">Sign Up here</a></p>
 						</div>
 						
 						<div id="#response"></div>

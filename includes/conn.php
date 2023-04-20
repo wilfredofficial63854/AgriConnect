@@ -1,7 +1,7 @@
 <?php	
 	$host = "localhost";
 	$user = "root";
-	$pswd = "";
+	$pswd = "0000";
 	$db = "agri_connect";
 
 	if($conn = mysqli_connect($host, $user, $pswd, $db)){
